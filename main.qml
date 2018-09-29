@@ -62,7 +62,7 @@ ApplicationWindow {
 
     ListModel {
         id: listModel
-
+        ListElement {nameView: "a"; loginView: "b"; passView: "c"}
     }
 
     ListView {
@@ -77,11 +77,41 @@ ApplicationWindow {
             }
 
             Text {
-                text: name
+                text: nameView
                 anchors {
-                    fill: parent
-                    left: parent.right
+                    left: parent.left
+                    verticalCenter: parent.verticalCenter
                     leftMargin: 16
+                }
+
+                font.family: robotoRegularFont.name
+                font.pixelSize: 16
+
+                renderType: Text.NativeRendering
+                horizontalAlignment: Text.AlignLeft
+                verticalAlignment: Text.AlignVCenter
+            }
+
+            Text {
+                id: loginView
+                anchors {
+                    centerIn: parent
+                }
+
+                font.family: robotoRegularFont.name
+                font.pixelSize: 16
+
+                renderType: Text.NativeRendering
+                horizontalAlignment: Text.AlignLeft
+                verticalAlignment: Text.AlignVCenter
+            }
+
+            Text {
+                text: passView
+                anchors {
+                    right: parent.right
+                    verticalCenter: parent.verticalCenter
+                    rightMargin: 16
                 }
 
                 font.family: robotoRegularFont.name

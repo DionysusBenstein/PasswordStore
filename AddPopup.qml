@@ -37,7 +37,7 @@ Popup {
         }
 
         TextField {
-            id: sourceInput
+            id: nameInput
             anchors {
                 left: parent.left
                 right: parent.right
@@ -83,7 +83,7 @@ Popup {
         Material.foreground: Material.Indigo
         flat: true
         onClicked: {
-            listModel.append({"name":passInput.text})
+            listModel.append({"nameView":nameInput.text, "loginView":loginInput.text, "passView":passInput.text})
             popup.close()
         }
     }
