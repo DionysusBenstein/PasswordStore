@@ -46,10 +46,19 @@ ApplicationWindow {
                 pointSize: 15
             }
         }
+
+        ToolButton {
+            anchors {
+                right: parent.right
+                top: parent.top
+                bottom: parent.bottom
+            }
+            icon.source: "images/outline-add-24px.svg"
+        }
     }
 
     ListModel {
-        id: navModel
+        id: listModel
 
         ListElement { name: qsTr("wdawda") }
         ListElement { name: qsTr("wdawgaw") }
@@ -94,6 +103,6 @@ ApplicationWindow {
                 echoMode: TextInput.Password
             }
         }
-        model: navModel
+        model: listModel
     }
 }
