@@ -6,4 +6,6 @@ Popup {
     x: Math.round((parent.width - width) / 2)
     y: Math.round((parent.height - height) / 2)
     width: 300; height: 300
+    modal: true
+    focus: true
 }
