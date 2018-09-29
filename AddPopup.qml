@@ -9,63 +9,64 @@ Popup {
     width: 300; height: 300
     modal: true
     focus: true
-    topPadding: 25
-    leftPadding: 25
-    rightPadding: 0
-    bottomPadding: 0
+    padding: 0
 
-    TextField {
-        id: loginInput
+    Column {
         anchors {
             left: parent.left
             top: parent.top
+            right: parent.right
+            margins: 25
         }
 
-        placeholderText: "Введите логин"
-    }
-
-    TextField {
-        id: passInput
-        anchors {
-            left: parent.left
-            top: loginInput.bottom
+        TextField {
+            id: sourceInput
+            placeholderText: "Введите название ресурса"
         }
 
-        placeholderText: "Введите пароль"
+        TextField {
+            id: loginInput
+            placeholderText: "Введите логин"
+        }
+
+        TextField {
+            id: passInput
+            placeholderText: "Введите пароль"
+        }
     }
 
     Button {
-            id: doneButton
-            anchors {
-                right: parent.right
-                bottom: parent.bottom
-                bottomMargin: 2
-                rightMargin: 8
-            }
-
-            text: qsTr("OK")
-            Material.foreground: Material.Indigo
-            flat: true
-            onClicked: {
-                listModel.append({"name":passInput.text})
-                popup.close()
-            }
+        id: doneButton
+        anchors {
+            right: parent.right
+            bottom: parent.bottom
+            bottomMargin: 2
+            rightMargin: 8
         }
 
-        Button {
-            id: cancelButton
-            anchors {
-                right: doneButton.left
-                bottom: parent.bottom
-                rightMargin: 8
-                bottomMargin: 2
-            }
-
-            text: qsTr("Отмена"/*"Cancel"*/)
-            Material.foreground: Material.Indigo
-            flat: true
-            onClicked: {
-
-            }
+        text: qsTr("OK")
+        Material.foreground: Material.Indigo
+        flat: true
+        onClicked: {
+            listModel.append({"name":passInput.text})
+            popup.close()
         }
+    }
+
+    Button {
+        id: cancelButton
+        anchors {
+            right: doneButton.left
+            bottom: parent.bottom
+            rightMargin: 8
+            bottomMargin: 2
+        }
+
+        text: qsTr("Отмена"/*"Cancel"*/)
+        Material.foreground: Material.Indigo
+        flat: true
+        onClicked: {
+
+        }
+    }
 }
