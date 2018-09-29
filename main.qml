@@ -47,4 +47,53 @@ ApplicationWindow {
             }
         }
     }
+
+    ListModel {
+        id: navModel
+
+        ListElement { name: qsTr("wdawda") }
+        ListElement { name: qsTr("wdawgaw") }
+        ListElement { name: qsTr("31515") }
+        ListElement { name: qsTr("123456") }
+        ListElement { name: qsTr("admin") }
+        ListElement { name: qsTr("09121985") }
+        ListElement { name: qsTr("31516") }
+        ListElement { name: qsTr("nljk;jk;j") }
+        ListElement { name: qsTr("bnmbnm") }
+        ListElement { name: qsTr("zxczs") }
+        ListElement { name: qsTr("uipui[ui]") }
+        ListElement { name: qsTr("fhghfg") }
+    }
+
+    ListView {
+        id: listView
+        anchors.fill: parent
+        delegate: ItemDelegate {
+            id: itemDelegate
+            height: 56
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+
+            TextInput {
+                text: name
+                anchors {
+                    fill: parent
+                    left: parent.right
+                    leftMargin: 16
+                }
+
+                font.family: robotoRegularFont.name
+                font.pixelSize: 16
+
+                renderType: Text.NativeRendering
+                horizontalAlignment: Text.AlignLeft
+                verticalAlignment: Text.AlignVCenter
+                selectByMouse: true
+                echoMode: TextInput.Password
+            }
+        }
+        model: navModel
+    }
 }
