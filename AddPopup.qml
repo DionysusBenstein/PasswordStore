@@ -11,27 +11,62 @@ Popup {
     focus: true
     padding: 0
 
-    Column {
+    Text {
+        id: popupTitle
         anchors {
             left: parent.left
             top: parent.top
+            margins: 25
+        }
+
+        text: qsTr("Добавить")
+        color: "#404040"
+        font {
+            pixelSize: 20
+            family: robotoMediumFont.name
+        }
+    }
+
+
+    Column {
+        anchors {
+            left: parent.left
+            top: popupTitle.bottom
             right: parent.right
             margins: 25
         }
 
         TextField {
             id: sourceInput
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+
             placeholderText: "Введите название ресурса"
+            Material.accent: Material.Indigo
         }
 
         TextField {
             id: loginInput
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+
             placeholderText: "Введите логин"
+            Material.accent: Material.Indigo
         }
 
         TextField {
             id: passInput
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+
             placeholderText: "Введите пароль"
+            Material.accent: Material.Indigo
         }
     }
 
