@@ -6,7 +6,7 @@ Popup {
     id: popup
     x: Math.round((parent.width - width) / 2)
     y: Math.round((parent.height - height) / 2)
-    width: 300; height: 300
+    width: 300; height: 275
     modal: true
     focus: true
     padding: 0
@@ -44,6 +44,7 @@ Popup {
             }
 
             placeholderText: "Введите название ресурса"
+            selectByMouse: true
             Material.accent: Material.Indigo
         }
 
@@ -55,6 +56,7 @@ Popup {
             }
 
             placeholderText: "Введите логин"
+            selectByMouse: true
             Material.accent: Material.Indigo
         }
 
@@ -66,6 +68,7 @@ Popup {
             }
 
             placeholderText: "Введите пароль"
+            selectByMouse: true
             Material.accent: Material.Indigo
         }
     }

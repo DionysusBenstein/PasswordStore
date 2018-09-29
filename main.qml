@@ -95,7 +95,9 @@ ApplicationWindow {
             Text {
                 id: loginView
                 anchors {
-                    centerIn: parent
+                    left: parent.left
+                    verticalCenter: parent.verticalCenter
+                    leftMargin: 16
                 }
 
                 font.family: robotoRegularFont.name
