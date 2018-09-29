@@ -46,6 +46,11 @@ Popup {
             placeholderText: "Введите название ресурса"
             selectByMouse: true
             Material.accent: Material.Indigo
+
+            TextContextMenu {
+                anchors.fill: parent
+                input: nameInput
+            }
         }
 
         TextField {
@@ -58,6 +63,11 @@ Popup {
             placeholderText: "Введите логин"
             selectByMouse: true
             Material.accent: Material.Indigo
+
+            TextContextMenu {
+                anchors.fill: parent
+                input: loginInput
+            }
         }
 
         TextField {
@@ -70,6 +80,11 @@ Popup {
             placeholderText: "Введите пароль"
             selectByMouse: true
             Material.accent: Material.Indigo
+
+            TextContextMenu {
+                anchors.fill: parent
+                input: passInput
+            }
         }
     }
 
