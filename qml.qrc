@@ -4,5 +4,6 @@
         <file>qtquickcontrols2.conf</file>
         <file>AddPopup.qml</file>
         <file>TextContextMenu.qml</file>
+        <file>Shortcuts.qml</file>
     </qresource>
 </RCC>

@@ -28,6 +28,7 @@ ApplicationWindow {
     FontLoader { id: robotoRegularFont; source: "fonts/Roboto-Regular_0.ttf" }
 
     AddPopup { id: addPopup }
+    Shortcuts { id: shortcuts }
 
     header: ToolBar {
         id: appBar
