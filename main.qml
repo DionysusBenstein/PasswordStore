@@ -27,6 +27,8 @@ ApplicationWindow {
     FontLoader { id: robotoMediumFont; source: "fonts/Roboto-Medium.ttf"     }
     FontLoader { id: robotoRegularFont; source: "fonts/Roboto-Regular_0.ttf" }
 
+    AddPopup { id: addPopup }
+
     header: ToolBar {
         id: appBar
         height: 56
@@ -54,24 +56,13 @@ ApplicationWindow {
                 bottom: parent.bottom
             }
             icon.source: "images/outline-add-24px.svg"
+            onClicked: addPopup.open()
         }
     }
 
     ListModel {
         id: listModel
 
-        ListElement { name: qsTr("wdawda") }
-        ListElement { name: qsTr("wdawgaw") }
-        ListElement { name: qsTr("31515") }
-        ListElement { name: qsTr("123456") }
-        ListElement { name: qsTr("admin") }
-        ListElement { name: qsTr("09121985") }
-        ListElement { name: qsTr("31516") }
-        ListElement { name: qsTr("nljk;jk;j") }
-        ListElement { name: qsTr("bnmbnm") }
-        ListElement { name: qsTr("zxczs") }
-        ListElement { name: qsTr("uipui[ui]") }
-        ListElement { name: qsTr("fhghfg") }
     }
 
     ListView {
@@ -85,7 +76,7 @@ ApplicationWindow {
                 right: parent.right
             }
 
-            TextInput {
+            Text {
                 text: name
                 anchors {
                     fill: parent
@@ -99,8 +90,6 @@ ApplicationWindow {
                 renderType: Text.NativeRendering
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
-                selectByMouse: true
-                echoMode: TextInput.Password
             }
         }
         model: listModel

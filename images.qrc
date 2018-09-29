@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>images/outline-add-24px.svg</file>
+        <file>images/outline-more_vert-24px.svg</file>
     </qresource>
 </RCC>
