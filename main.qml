@@ -56,6 +56,7 @@ ApplicationWindow {
                 top: parent.top
                 bottom: parent.bottom
             }
+
             icon.source: "images/outline-add-24px.svg"
             onClicked: addPopup.open()
         }
@@ -88,7 +89,6 @@ ApplicationWindow {
                 text: nameView
                 font.family: robotoRegularFont.name
                 font.pixelSize: 16
-
                 renderType: Text.NativeRendering
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
@@ -100,7 +100,6 @@ ApplicationWindow {
                 text: loginView
                 font.family: robotoRegularFont.name
                 font.pixelSize: 16
-
                 renderType: Text.NativeRendering
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
@@ -117,7 +116,6 @@ ApplicationWindow {
                 text: passView
                 font.family: robotoRegularFont.name
                 font.pixelSize: 16
-
                 renderType: Text.NativeRendering
                 horizontalAlignment: Text.AlignLeft
                 verticalAlignment: Text.AlignVCenter
