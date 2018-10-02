@@ -20,7 +20,7 @@ ApplicationWindow {
     visible: true
     width: 400
     height: 600
-    title: qsTr("Stack")
+    title: qsTr("Passowrd Store v1.0")
 
     FontLoader { id: robotoThinFont; source: "fonts/Roboto-Thin_0.ttf"       }
     FontLoader { id: robotoLightFont; source: "fonts/Roboto-Light.ttf"       }
@@ -63,7 +63,7 @@ ApplicationWindow {
 
     ListModel {
         id: listModel
-        ListElement {nameView: "a"; loginView: "b"; passView: "c"}
+        ListElement {nameView: "TestName"; loginView: "TestLogin"; passView: "TestPassword"}
     }
 
     ListView {
@@ -78,13 +78,14 @@ ApplicationWindow {
             }
 
             Text {
+                id: name
+                anchors {
+                    left: parent.left
+                    verticalCenter: parent.verticalCenter
+                    leftMargin: 16
+                }
+
                 text: nameView
-                anchors {
-                    left: parent.left
-                    verticalCenter: parent.verticalCenter
-                    leftMargin: 16
-                }
-
                 font.family: robotoRegularFont.name
                 font.pixelSize: 16
 
@@ -94,13 +95,9 @@ ApplicationWindow {
             }
 
             Text {
-                id: loginView
-                anchors {
-                    left: parent.left
-                    verticalCenter: parent.verticalCenter
-                    leftMargin: 16
-                }
-
+                id: login
+                anchors.centerIn: parent
+                text: loginView
                 font.family: robotoRegularFont.name
                 font.pixelSize: 16
 
@@ -110,13 +107,14 @@ ApplicationWindow {
             }
 
             Text {
-                text: passView
+                id: pass
                 anchors {
                     right: parent.right
                     verticalCenter: parent.verticalCenter
                     rightMargin: 16
                 }
 
+                text: passView
                 font.family: robotoRegularFont.name
                 font.pixelSize: 16
 
