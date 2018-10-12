@@ -64,7 +64,7 @@ ApplicationWindow {
 
     ListModel {
         id: listModel
-        ListElement {nameView: "TestName"; loginView: "TestLogin"; passView: "TestPassword"}
+        ListElement {nameView: "типа сайт"; loginView: "типа логин"; passView: "типа пароль"}
     }
 
     ListView {

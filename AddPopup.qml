@@ -1,3 +1,17 @@
+/*******************************************************************/
+
+/* Original File Name: AddPopup.qml                                */
+
+/* Date: 29-09-2018                                                */
+
+/* Developer: Dionysus Benstein                                    */
+
+/* Copyright © 2018 Dionysus Benstein. All rights reserved.        */
+
+/* Description: Всплывающее окно с заполнением данных.             */
+
+/*******************************************************************/
+
 import QtQuick 2.11
 import QtQuick.Controls 2.4
 import QtQuick.Controls.Material 2.4
